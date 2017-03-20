@@ -9,7 +9,7 @@ add_definitions(-std=c++11 -Wall -Wunused-parameter -Wextra)
 add_executable(tutorial1 ${CMAKE_CURRENT_SOURCE_DIR}/tutorial1.cpp) 
 target_link_libraries(tutorial1 framework)
 
-#add_executable(tutorial2 ${CMAKE_CURRENT_SOURCE_DIR}/tutorial2.cpp) 
-#target_link_libraries(tutorial2 framework)
+add_executable(tutorial2 ${CMAKE_CURRENT_SOURCE_DIR}/tutorial2.cpp) 
+target_link_libraries(tutorial2 framework)
 
 
