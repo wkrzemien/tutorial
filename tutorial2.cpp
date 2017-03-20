@@ -20,7 +20,9 @@ int main()
   // 11.Create another vector vec2
   // 12.Check if it is empty
   // 13.Add 20, 22 to second vector
-  // 14.Insert 23 inbetween 20 and 23.
+  // 14.Insert 23 in-between 20 and 23.
   // 15.copy first 5 elements from vec1 into vec3
+  // 16.Remove all elements from the vec3
+  // 17.Remove elements from 3 to 5 in vec1
   return 0;
 }
