@@ -12,4 +12,6 @@ target_link_libraries(tutorial1 framework)
 add_executable(tutorial2 ${CMAKE_CURRENT_SOURCE_DIR}/tutorial2.cpp) 
 target_link_libraries(tutorial2 framework)
 
+add_executable(tutorial3 ${CMAKE_CURRENT_SOURCE_DIR}/tutorial3.cpp)
+target_link_libraries(tutorial3 framework)
 
