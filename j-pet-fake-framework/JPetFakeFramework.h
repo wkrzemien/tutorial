@@ -13,27 +13,32 @@
  *  @file JPetFakeFramework.h
  */
 
-#ifndef JPETFAKEFRAMEWORK_H 
-#define JPETFAKEFRAMEWORK_H 
+#ifndef JPETFAKEFRAMEWORK_H
+#define JPETFAKEFRAMEWORK_H
+#include <vector>
 
 namespace fake_framework
 {
 
-class JPetSignal {
-  float fTime = 0;
-  int fDetectorId = -1;   /// from 1 to 10
-  int fTimeWindowId = -1; /// from 1 to 100
+
+struct JPetSignal {
+  JPetSignal(float time, int detector, int timeW);
+  JPetSignal(){};
+  float fTime = 0; /// 0.0 to 10.
+  int fDetectorId = -1;   /// from 1 to 2
+  int fTimeWindowId = -1; /// from 1 to 5
 };
 
-struct JPetHit{
+struct JPetHit {
   JPetHit(const JPetSignal& signalA, const JPetSignal& signalB);
-  float fEnergy = 0;
   float fTime = 0;  ///  tA+tB/2
   float fTimeDifference = 0; /// tA -tB
   float fPosZ = 0; // (tA-tB) * c
   JPetSignal fSignalA;
   JPetSignal fSignalB;
 };
+
+std::vector<JPetSignal> performExperiment(int nevents);
 
 }
 #endif /*  !JPETFAKEFRAMEWORK_H */
